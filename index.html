@@ -1,0 +1,158 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Norvak</title>
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img id="logo" src="norvak-png-glitch.png" alt="Norvak logo">
+    <h1 id="welcome-text"></h1>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <img src="norvak-png-glitch.png" alt="Norvak logo" class="hero-logo">
+      <h1 class="hero-title">Building Modern Web Experiences</h1>
+      <p class="hero-subtitle">Crafted with passion, powered by code.</p>
+      <a href="https://github.com/Chepot87" class="btn-primary" target="_blank">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <img
+        src="chepo.ai.avatar.jpg"
+        alt="Norvak Avatar"
+        class="about-avatar"
+      >
+      <div class="about-text">
+        <h2>About Norvak
+        </h2>
+        <p>
+          At Norvak, we’re passionate about crafting modern, functional web experiences. 
+          Our team builds responsive, accessible sites that load quickly and drive results. 
+          Whether you’re launching a startup or refreshing your brand’s web presence, 
+          we’ll partner with you to bring your vision to life. Let’s get started--contact us today!
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/Chepot87" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jose-cortes-5615a9283/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://instagram.com/chepol87" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/jose.cortes.481480" target="_blank" aria-label="facebook">
+            <i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Services Section -->
+<section id="services">
+  <h2>My Services</h2>
+  <div class="services-grid">
+
+    <!-- Service Card 1 -->
+    <a href="custom-websites.html" class="service-card">
+      <i class="fas fa-laptop-code service-icon" aria-hidden="true"></i>
+      <h3>Custom Websites</h3>
+      <p>Responsive, performant sites built with HTML5, CSS3 y JavaScript.</p>
+    </a>
+
+    <!-- Service Card 2 -->
+    <a href="mobile-design.html" class="service-card">
+      <i class="fas fa-mobile-alt service-icon" aria-hidden="true"></i>
+      <h3>Mobile-First Design</h3>
+      <p>Mobile-friendly designs for a seamless experience on all devices.</p>
+    </a>
+
+    <!-- Service Card 3 -->
+    <a href="maintenance.html" class="service-card">
+      <i class="fas fa-tools service-icon" aria-hidden="true"></i>
+      <h3>Maintenance & Support</h3>
+      <p>Updates, optimizations and ongoing support.</p>
+    </a>
+
+    <!-- Service Card 4 -->
+    <a href="seo.html" class="service-card">
+      <i class="fas fa-search service-icon" aria-hidden="true"></i>
+      <h3>SEO Optimization</h3>
+      <p>Improve your visibility in search engines with advanced SEO practices.</p>
+    </a>
+
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+<section id="contact">
+  <h2>Let's Do This!</h2>
+  <p>Do you have a project in mind? I'm here to help you make it happen. Complete the form and I will contact you as soon as possible.</p>
+  <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required>
+    </div>
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- Chat Button & Modal -->
+  <button id="chat-button" aria-label="Open chat">💬</button>
+
+  <div id="chat-modal">
+    <div class="chat-header">
+    <span>Chat with us!</span>
+      <button id="chat-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div id="chat-messages"></div>
+    <form id="chat-form">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Hello, what we cookin?..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+    <!-- Footer -->
+  <footer>
+    <p>Made with ❤ by Norvak &copy; 2025 | All rights reserved</p>
+    <img src="logo.gpt.transparent.png" alt="Norvak logo" class="norvak-icon">
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
