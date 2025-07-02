@@ -69,7 +69,7 @@ function getBotReply(message) {
     return `Hey! 👋 You just made my day 2% better. how can I help you?<br><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXhkbWJzeTE5bHo3OW9jaDd5eWwzY3BhYXZkazdtc3NsdDNubWY5byZlcD12MV9naWZzX3NlYXJjaCZjdD1n/28GHfhGFWpFgsQB4wR/giphy.gif" width="100">`;
   } else if (msg.includes('available') || msg.includes('time')) {
     return "We're available 24/7... <br> But emotionally? Always tired. 😅";
-  } else if (msg.includes('price') || msg.includes('cost') || msg.includes('how much')) {
+  } else if (msg.includes('price') || msg.includes('cost') || msg.includes('how much')|| msg.includes('website')) {
     return `Prices? Let’s just say we’re cheaper than therapy and twice as helpful 😄. Send us a message in our page for pricing<br><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTZwOHRoZm9xd2FvbnBmdDE4aDloaXVtcjNwNjl1dW55NDNiNHY2cSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VhWVAa7rUtT3xKX6Cd/giphy.gif" width="100">`;
   } else if (msg.includes('help') || msg.includes('support')) {
     return "I'm here to help! Unless it's with math... then we're both doomed. 😅<br>Im here, how can I help?";
