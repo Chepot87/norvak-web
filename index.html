@@ -10,6 +10,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Norvak Web — modern, responsive, and high-performance websites.">
+  <link rel="icon" href="favicon.ico">
+
 </head>
 <body>
   
@@ -58,7 +62,7 @@
           <a href="https://instagram.com/chepol87" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/jose.cortes.481480" target="_blank" aria-label="facebook">
+          <a href="https://www.facebook.com/chepol87" target="_blank" aria-label="facebook">
             <i class="fab fa-facebook"></i></a>
         </div>
       </div>
@@ -102,28 +106,31 @@
 </section>
 
 
-
-  <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact">
   <h2>Let's Do This!</h2>
   <p>Do you have a project in mind? I'm here to help you make it happen. Complete the form and I will contact you as soon as possible.</p>
-  <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+  <form action="mailto:cortes.jose.087@gmail.com?subject=Norvak Inquiry"
+        method="GET"
+        enctype="text/plain"
+        class="contact-form">
     <div class="form-row">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
     </div>
     <div class="form-row">
       <label for="email">Email</label>
-      <input type="email" id="email" name="_replyto" required>
+      <input type="email" id="email" name="email" required>
     </div>
     <div class="form-row">
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="5" required></textarea>
     </div>
-    
     <button type="submit" class="btn-primary">Send Message</button>
   </form>
 </section>
+
+
 
 
   <!-- Chat Button & Modal -->
