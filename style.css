@@ -1,20 +1,39 @@
-/* style.css */
+:root {
+  --accent: #08b5ff;
+  --bg-primary: #111;
+  --bg-secondary: #000;
+  --text-primary: #fff;
+  --text-secondary: #aaa;
+  --transition-duration: 0.3s;
+}
 
-
-/* Base */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: 'Inter', sans-serif;
-  background: #111;
-  color: #fff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Splash Screen */
 #splash {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: #000;
+  inset: 0;
+  background-color: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,44 +45,39 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-/* Logo Fade-In */
-#logo {
+#splash #logo {
   width: 500px;
   margin-bottom: 1rem;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  transition-delay: 0.5s;
+  transition: opacity 1s ease 0.5s;
 }
 #splash:not(.hide) #logo {
   opacity: 1;
 }
-/* Typewriter */
 #welcome-text {
   font-family: 'Courier New', monospace;
   font-size: 4rem;
+  border-right: 0.15em solid var(--accent);
   white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid #08b5ff;
-  margin: 0;
 }
 
-/* Hero */
+/* Hero Section */
 #hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   background:
-    url('hero-bg.jpg') center/cover no-repeat,
-    #000;
+    var(--bg-secondary) url('hero-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 #hero::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 .hero-content {
   position: relative;
@@ -80,7 +94,7 @@ body {
 .hero-title {
   font-family: 'Courier New', monospace;
   font-size: 3rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards 1s;
 }
@@ -94,42 +108,41 @@ body {
 .btn-primary {
   display: inline-block;
   padding: 1rem 2rem;
-  background: #08b5ff;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-primary);
   border-radius: 2rem;
-  text-decoration: none;
   font-weight: bold;
-  transition: background .3s ease, transform .3s ease;
+  transition: background var(--transition-duration), transform var(--transition-duration);
   opacity: 0;
   animation: fadeIn 1s ease-out forwards 2s;
 }
 .btn-primary:hover {
   background: #0057c2;
   transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* About */
+/* About Section */
 #about {
   padding: 4rem 1rem;
-  background: #000;
+  background: var(--bg-secondary);
 }
 .about-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; ;
+  align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   gap: 2rem;
-  text-align: left;
 }
 .about-avatar {
   flex: 0 0 200px;
-  width: 200px; height: 200px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #08b5ff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation: fadeIn 1s ease-out forwards 0.5s;
 }
@@ -142,118 +155,33 @@ body {
   font-family: 'Courier New', monospace;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #08b5ff;
+  color: var(--accent);
 }
 .about-text p {
-  line-height: 1.6;
   margin: 0;
-}
-.social-links {
-  margin-top: 1.5rem;
 }
 .social-links a {
   margin-right: 1rem;
   font-size: 1.5rem;
-  color: #fff;
-  transition: color .3s ease;
+  color: var(--text-primary);
+  transition: color var(--transition-duration);
 }
 .social-links a:hover {
-  color: #08b5ff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #000;
-  color: #aaa;
-  font-size: .9rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-avatar {
-    margin: 0 auto;
-  }
-  .hero-title {
-    font-size: 2.5rem;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Contact Section — Compact */
-#contact {
-  padding: 2rem 1rem;         /* reduced vertical padding */
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
-
-#contact h2 {
-  font-family: 'Courier New', monospace;
-  font-size: 2rem;            /* smaller heading */
-  color: #08b5ff;
-  margin-bottom: 1.5rem;      /* tighter space below */
-}
-
-.contact-form {
-  max-width: 400px;           /* narrower form */
-  margin: 0 auto;
-  text-align: left;
-}
-
-.form-row {
-  margin-bottom: 1rem;        /* less space between fields */
-}
-
-.form-row label {
-  display: block;
-  margin-bottom: 0.25rem;     /* tighter label spacing */
-  font-weight: bold;
-}
-
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 0.5rem 0.75rem;    /* smaller inputs */
-  font-size: 0.9rem;
-  border: 1px solid #333;
-  border-radius: 0.5rem;
-  background: #111;
-  color: #fff;
-}
-
-.contact-form .btn-primary {
-  display: block;
-  margin: 1rem auto 0;
-  padding: 0.75rem 1.5rem;     /* smaller button */
-  font-size: 0.9rem;
+  color: var(--accent);
 }
 
 /* Services Section */
 #services {
   padding: 3rem 1rem;
-  background: #111;
-  color: #fff;
+  background: var(--bg-primary);
   text-align: center;
 }
 #services h2 {
   font-family: 'Courier New', monospace;
   font-size: 2.5rem;
-  color: #08b5ff;
+  color: var(--accent);
   margin-bottom: 2rem;
 }
-
-/* Grid de servicios */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -261,159 +189,131 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-/* Tarjetas individuales */
 .service-card {
-  background: #000;
-  border-radius: .5rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(10px);
   animation: fadeIn 1s ease-out forwards;
+  transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
-/* Retrasos para animación escalonada */
 .service-card:nth-child(1) { animation-delay: 0.5s; }
 .service-card:nth-child(2) { animation-delay: 0.8s; }
 .service-card:nth-child(3) { animation-delay: 1.1s; }
 .service-card:nth-child(4) { animation-delay: 1.4s; }
-
-/* Ícono de servicio */
 .service-icon {
   font-size: 2rem;
-  color: #08b5ff;
-  margin-bottom: .75rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
 }
-
-/* Títulos y descripciones */
 .service-card h3 {
-  font-family: 'Courier New', monospace;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .service-card p {
-  font-size: .95rem;
-  line-height: 1.4;
   margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Reutiliza la animación fadeIn existente */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Contact Section */
+#contact {
+  padding: 2rem 1rem;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+#contact h2 {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form-row {
+  margin-bottom: 1rem;
+}
+.form-row label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+.contact-form .btn-primary {
+  display: block;
+  margin: 1rem auto 0;
 }
 
-/* Ajustes móviles */
-@media (max-width: 500px) {
-  #services h2 { font-size: 2rem; }
-  .service-card { padding: 1rem; }
-}
-
-/* Make service cards links */
-.service-card {
-  display: block;               /* anchors behave like blocks */
-  text-decoration: none;        /* remove underline */
-  color: inherit;               /* keep your white/neon text */
-  background: #000;
-  border-radius: .5rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transform: translateY(10px);
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-}
-
-/* If you had nth-child delays for animations, keep them: */
-.service-card:nth-child(1) { animation-delay: 0.5s; }
-.service-card:nth-child(2) { animation-delay: 0.8s; }
-.service-card:nth-child(3) { animation-delay: 1.1s; }
-.service-card:nth-child(4) { animation-delay: 1.4s; }
-
-/* Icons, titles, text remain unchanged */
-.service-icon { /* … */ }
-.service-card h3 { /* … */ }
-.service-card p { /* … */ }
-
-
-/* ── Chat Widget ── */
+/* Chat Widget */
 #chat-button {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--text-primary);
   border: none;
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 10000;
 }
-
 #chat-modal {
   position: fixed;
   bottom: 5.5rem;
   right: 1.5rem;
   width: 300px;
   max-width: 90%;
-  background: var(--bg-alt);
+  background: var(--bg-secondary);
   border: 1px solid #222;
   border-radius: 0.5rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   display: flex;
   flex-direction: column;
   transform: scale(0);
   transform-origin: bottom right;
-  transition: transform 0.2s ease-out;
+  transition: transform var(--transition-duration);
   overflow: hidden;
   z-index: 9999;
 }
-#chat-modal.open {
-  transform: scale(1);
-}
-
+#chat-modal.open { transform: scale(1); }
 .chat-header {
   background: var(--accent);
-  color: #fff;
-  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 1rem;
+}
+.chat-header span,
+#chat-close {
+  color: var(--text-primary);
 }
 #chat-close {
   background: none;
   border: none;
-  color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
 }
-
 #chat-messages {
   flex: 1;
   padding: 0.5rem;
   overflow-y: auto;
   font-size: 0.9rem;
 }
-#chat-messages .message {
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-#chat-messages .message.user {
-  text-align: right;
-  color: var(--accent);
-}
-#chat-messages .message.bot {
-  text-align: left;
-  color: #ccc;
-}
-
+#chat-messages .message.user { text-align:right; color:var(--accent); }
+#chat-messages .message.bot { text-align:left; color:var(--text-secondary); }
 #chat-form {
   display: flex;
   border-top: 1px solid #333;
@@ -423,33 +323,52 @@ footer {
   padding: 0.5rem;
   border: none;
   background: #222;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 #chat-form button {
   background: var(--accent);
   border: none;
-  color: #fff;
+  color: var(--text-primary);
   padding: 0 1rem;
   cursor: pointer;
 }
-
 #chat-form button:hover {
-  background: darken(var(--accent), 10%);
+  filter: brightness(0.9);
 }
-/* ── Norvak Icon ── */
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
 .norvak-icon {
   width: 60px;
   height: 60px;
-  transition: transform 0.2s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 5px rgba(0, 255, 204, 0.3));
+  transition: transform var(--transition-duration), filter var(--transition-duration);
+  filter: drop-shadow(0 0 5px rgba(0,255,204,0.3));
 }
-
 .norvak-icon:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.6));
+  filter: drop-shadow(0 0 10px rgba(0,255,204,0.6));
+}
 
-  .message.bot img {
-  margin-top: 0.5rem;
-  border-radius: 0.5rem;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
