@@ -2,147 +2,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Norvak</title>
-  <!-- Font Awesome for social icons -->
+  <!-- ========== Meta base / SEO ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Norvak — Building Modern Web Experiences</title>
+  <meta name="description" content="Norvak diseña y desarrolla sitios web modernos, rápidos y accesibles. Responsive, SEO técnico y soporte continuo para negocios que quieren resultados." />
+  <meta name="keywords" content="Norvak, desarrollo web, responsive, HTML5, CSS3, JavaScript, SEO técnico, performance, accesibilidad, Florida" />
+  <link rel="canonical" href="https://chepot87.github.io/norvak-web/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- ========== Social / Open Graph ========== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Norvak — Building Modern Web Experiences" />
+  <meta property="og:description" content="Sitios web modernos, rápidos y accesibles. Diseño mobile-first, optimización SEO y mantenimiento continuo." />
+  <meta property="og:url" content="https://chepot87.github.io/norvak-web/" />
+  <!-- IMPORTANTE: Cambia la imagen si usas otra ruta -->
+  <meta property="og:image" content="https://chepot87.github.io/norvak-web/img/screenshot.png" />
+  <meta property="og:site_name" content="Norvak" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ========== Twitter Cards ========== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Norvak — Building Modern Web Experiences" />
+  <meta name="twitter:description" content="Webs modernas y funcionales que cargan rápido y convierten." />
+  <meta name="twitter:image" content="https://chepot87.github.io/norvak-web/img/screenshot.png" />
+
+  <!-- ========== Favicons / Theme ========== -->
+  <!-- Ajusta las rutas si tus archivos están en otra carpeta -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ========== Iconos (Font Awesome) ========== -->
+  <!-- Sin 'integrity' para evitar fallo por hash incompleto; si quieres SRI, te paso el hash exacto de la versión que uses -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Norvak Web — modern, responsive, and high-performance websites.">
-  <link rel="icon" href="logo.gpt.transparent.png" type="image/png">
-
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
+
 <body>
-  
-  <!-- Splash Screen -->
-  <div id="splash">
-    <img id="logo" src="norvak-png-glitch.png" alt="Norvak logo">
+  <!-- ========== Skip link (Accesibilidad) ========== -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ========== Splash Screen ========== -->
+  <div id="splash" aria-hidden="true">
+    <img id="logo" src="norvak-png-glitch.png" alt="Norvak logo glitch" />
     <h1 id="welcome-text"></h1>
   </div>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <img src="norvak-png-glitch.png" alt="Norvak logo" class="hero-logo">
-      <h1 class="hero-title">Building Modern Web Experiences</h1>
-      <p class="hero-subtitle">Crafted with passion, powered by code.</p>
-      <a href="https://github.com/Chepot87" class="btn-primary" target="_blank">
-        View My Work
-      </a>
-    </div>
-  </section>
+  <!-- ========== Main Content Wrapper ========== -->
+  <main id="main">
+    <!-- ========== Hero Section ========== -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-content">
+        <img src="norvak-png-glitch.png" alt="Norvak logo" class="hero-logo" />
+        <h1 class="hero-title">Building Modern Web Experiences</h1>
+        <p class="hero-subtitle">Crafted with passion, powered by code.</p>
+        <a
+          href="https://github.com/Chepot87"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View My Work
+        </a>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about-container">
-      <img
-        src="chepo.ai.avatar.jpg"
-        alt="Norvak Avatar"
-        class="about-avatar"
-      >
-      <div class="about-text">
-        <h2>About Norvak
-        </h2>
-        <p>
-          At Norvak, we’re passionate about crafting modern, functional web experiences. 
-          Our team builds responsive, accessible sites that load quickly and drive results. 
-          Whether you’re launching a startup or refreshing your brand’s web presence, 
-          we’ll partner with you to bring your vision to life. Let’s get started--contact us today!
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/Chepot87" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jose-cortes-5615a9283/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://instagram.com/chepol87" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/chepol87" target="_blank" aria-label="facebook">
-            <i class="fab fa-facebook"></i></a>
+    <!-- ========== About Section ========== -->
+    <section id="about" aria-label="About Norvak">
+      <div class="about-container">
+        <img
+          src="chepo.ai.avatar.jpg"
+          alt="Avatar de Norvak"
+          class="about-avatar"
+        />
+        <div class="about-text">
+          <h2>About Norvak</h2>
+          <p>
+            At Norvak, we’re passionate about crafting modern, functional web experiences.
+            Our team builds responsive, accessible sites that load quickly and drive results.
+            Whether you’re launching a startup or refreshing your brand’s web presence,
+            we’ll partner with you to bring your vision to life. Let’s get started—contact us today!
+          </p>
+
+          <div class="social-links" aria-label="Redes sociales">
+            <a href="https://github.com/Chepot87" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jose-cortes-5615a9283/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/chepol87" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/chepol87" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<!-- Services Section -->
-<section id="services">
-  <h2>My Services</h2>
-  <div class="services-grid">
+    <!-- ========== Services Section ========== -->
+    <section id="services" aria-label="Services">
+      <h2>My Services</h2>
 
-    <!-- Service Card 1 -->
-    <a href="custom-websites.html" class="service-card">
-      <i class="fas fa-laptop-code service-icon" aria-hidden="true"></i>
-      <h3>Custom Websites</h3>
-      <p>Responsive, performant sites built with HTML5, CSS3 y JavaScript.</p>
-    </a>
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <a href="custom-websites.html" class="service-card" aria-label="Custom Websites">
+          <i class="fas fa-laptop-code service-icon" aria-hidden="true"></i>
+          <h3>Custom Websites</h3>
+          <p>Responsive, performant sites built with HTML5, CSS3 y JavaScript.</p>
+        </a>
 
-    <!-- Service Card 2 -->
-    <a href="mobile-design.html" class="service-card">
-      <i class="fas fa-mobile-alt service-icon" aria-hidden="true"></i>
-      <h3>Mobile-First Design</h3>
-      <p>Mobile-friendly designs for a seamless experience on all devices.</p>
-    </a>
+        <!-- Service Card 2 -->
+        <a href="mobile-design.html" class="service-card" aria-label="Mobile-First Design">
+          <i class="fas fa-mobile-alt service-icon" aria-hidden="true"></i>
+          <h3>Mobile-First Design</h3>
+          <p>Mobile-friendly designs for a seamless experience on all devices.</p>
+        </a>
 
-    <!-- Service Card 3 -->
-    <a href="maintenance.html" class="service-card">
-      <i class="fas fa-tools service-icon" aria-hidden="true"></i>
-      <h3>Maintenance & Support</h3>
-      <p>Updates, optimizations and ongoing support.</p>
-    </a>
+        <!-- Service Card 3 -->
+        <a href="maintenance.html" class="service-card" aria-label="Maintenance & Support">
+          <i class="fas fa-tools service-icon" aria-hidden="true"></i>
+          <h3>Maintenance & Support</h3>
+          <p>Updates, optimizations and ongoing support.</p>
+        </a>
 
-    <!-- Service Card 4 -->
-    <a href="seo.html" class="service-card">
-      <i class="fas fa-search service-icon" aria-hidden="true"></i>
-      <h3>SEO Optimization</h3>
-      <p>Improve your visibility in search engines with advanced SEO practices.</p>
-    </a>
+        <!-- Service Card 4 -->
+        <a href="seo.html" class="service-card" aria-label="SEO Optimization">
+          <i class="fas fa-search service-icon" aria-hidden="true"></i>
+          <h3>SEO Optimization</h3>
+          <p>Improve your visibility in search engines with advanced SEO practices.</p>
+        </a>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <!-- ========== Contact Section ========== -->
+    <section id="contact" aria-label="Contact">
+      <h2>Let's Do This!</h2>
+      <p>
+        Do you have a project in mind? I'm here to help you make it happen.
+        Complete the form and I will contact you as soon as possible.
+      </p>
 
-
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Let's Do This!</h2>
-  <p>Do you have a project in mind? I'm here to help you make it happen. Complete the form and I will contact you as soon as possible.</p>
-  <form action="mailto:cortes.jose.087@gmail.com?subject=Norvak Inquiry"
-        method="GET"
+      <!-- Opción mailto (simple). Recomendado a futuro: Formspree/Netlify -->
+      <form
+        action="mailto:cortes.jose.087@gmail.com?subject=Norvak%20Inquiry"
+        method="POST"
         enctype="text/plain"
-        class="contact-form">
-    <div class="form-row">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-row">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-row">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Send Message</button>
-  </form>
-</section>
+        class="contact-form"
+      >
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
 
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
 
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-  <!-- Chat Button & Modal -->
+  <!-- ========== Chat Floating Button & Modal ========== -->
   <button id="chat-button" aria-label="Open chat">💬</button>
 
-  <div id="chat-modal">
+  <div id="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title" hidden>
     <div class="chat-header">
-    <span>Chat with us!</span>
-      <button id="chat-close" aria-label="Close chat">&times;</button>
+      <span id="chat-title">Chat with us!</span>
+      <button id="chat-close" type="button" aria-label="Close chat">&times;</button>
     </div>
-    <div id="chat-messages"></div>
+
+    <div id="chat-messages" aria-live="polite"></div>
+
     <form id="chat-form">
+      <label class="sr-only" for="chat-input">Type your message</label>
       <input
         type="text"
         id="chat-input"
@@ -154,12 +205,14 @@
     </form>
   </div>
 
-    <!-- Footer -->
+  <!-- ========== Footer ========== -->
   <footer>
     <p>Made with ❤ by Norvak &copy; 2025 | All rights reserved</p>
-    <img src="logo.gpt.transparent.png" alt="Norvak logo" class="norvak-icon">
+    <img src="logo.gpt.transparent.png" alt="Norvak icon" class="norvak-icon" />
   </footer>
-  
+
+  <!-- ========== Scripts ========== -->
+  <!-- Carga tu JS al final para mejor performance -->
   <script src="script.js"></script>
 </body>
 </html>
